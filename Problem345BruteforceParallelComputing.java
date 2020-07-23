@@ -1,7 +1,7 @@
 //Answer:
 public class Problem345BruteforceParallelComputing{
 
-	public static void main(String[] args) {/* 	GEZGİN SATICI PROBLEMİNİN KESİN SONUCUNU BRUTEFORCE DIŞINDA BİR METODUN VEREMEDİĞİ ÇEŞİTLİ MAKALELERDE BELİRTİLMİŞTİR.
+	public static void main(String[] args) {/* 	GEZGİN SATICI PROBLEMİNİN KESİN SONUCUNU CEREN ALGORİTMALARIN İTERASYON SAYISI YÜKSEKLİĞİ SEBEBİYLE DEZAVANTAJLI OLDUĞU ÇEŞİTLİ MAKALELERDE BELİRTİLMİŞTİR.
 	Araç rotalama problemlerinden olan gezgin satıcı problemi örneği görüyoruz, minimizasyon yerine maksimizasyon amacı güdüyoruz. İterasyon sayımız çok yüksek olduğu için
 	sezgisel algoritmalar tercih edilebilir fakat sezgisel algoritmalar en iyi çözümü garanti edemez, excelde genetik solver kullanarak çözdüğümüzde sonuç doğru çıktı. Algoritmanın 
 	verimli olması için koşulu sağlamayan rotaların denenmesi engellenmiştir.

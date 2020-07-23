@@ -1,14 +1,14 @@
 //Answer:
-public class Problem345BruteforceParallelComputing{
+public class Problem345{
 
-	public static void main(String[] args) {/* 	GEZGİN SATICI PROBLEMİNİN KESİN SONUCUNU CEREN ALGORİTMALARIN İTERASYON SAYISI YÜKSEKLİĞİ SEBEBİYLE DEZAVANTAJLI OLDUĞU ÇEŞİTLİ MAKALELERDE BELİRTİLMİŞTİR.
-	Araç rotalama problemlerinden olan gezgin satıcı problemi örneği görüyoruz, minimizasyon yerine maksimizasyon amacı güdüyoruz. İterasyon sayımız çok yüksek olduğu için
-	sezgisel algoritmalar tercih edilebilir fakat sezgisel algoritmalar en iyi çözümü garanti edemez, excelde genetik solver kullanarak çözdüğümüzde sonuç doğru çıktı. Algoritmanın 
-	verimli olması için koşulu sağlamayan rotaların denenmesi engellenmiştir.
-	Ayrıca bir işlemin çıktısı diğer işlemin girdisi olmayan durumlarda (yani paralel hesaplanabilecek durumlarda) paralel hesaplama yaptırılmıştır. Bu da paralel işlemler ile işlemcinin 
-	çekirdek kullanımını arttırarak daha kısa sürede sonuç bulmamızı sağlar. Yaptığım denemeler ortalama olarak 2-3 gün içerisinde sonuç vereceğini gösterdi.
-	
-
+	public static void main(String[] args) {
+	/* 
+	GEZGİN SATICI PROBLEMİNİN KESİN SONUCUNU VEREN ALGORİTMALARIN İTERASYON SAYISI YÜKSEKLİĞİ SEBEBİYLE DEZAVANTAJLI OLDUĞU ÇEŞİTLİ MAKALELERDE BELİRTİLMİŞTİR.
+	İterasyon sayımız çok yüksek olduğu için sezgisel algoritmalar tercih edilebilir fakat sezgisel algoritmalar en iyi çözümü garanti edemez.
+	Sezgisel çözüm için Excel evolutionary solver kullanıldığında çözdüğümüzde sonuç doğru çıktı. Değişkenler varsayılan olarak ele alınarak çözüm yapıtırıldı.
+	Algoritmanın verimli olması için koşulu sağlamayan rotaların denenmesi engellenmiştir.
+	Ayrıca paralel yapılabilecek işlemlerin her bir thread de paralel yapılması sağlanarak programın daha kısa sürede sonuç vermesi sağlanmıştır. Problemin sezgisel çözümü birkaç saniye alırken kesin çözümü 3 gün almaktadır.
+	Bu problem sezgisel algoritmaların gerekliliğini ve başarısını gösterir niteliktedir.
 	*/
 		int[][] matrix = { 
 				{  7,  53, 183, 439, 863, 497, 383, 563,  79, 973, 287,  63, 343, 169, 583},

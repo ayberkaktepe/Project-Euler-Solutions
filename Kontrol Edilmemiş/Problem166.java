@@ -5,10 +5,9 @@
 
 package euler;
 
-public class Problem166 {
+public class problem166 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		/* 
 		 * a b c * x
 		 * d e f * y

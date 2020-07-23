@@ -1,7 +1,7 @@
 //çalýþtýr
 package euler;
 
-public class Problem070 {
+public class problem070 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

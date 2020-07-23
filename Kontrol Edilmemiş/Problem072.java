@@ -1,7 +1,7 @@
 //çalýþtýr
 package euler;
 
-public class Problem072 {
+public class problem072 {
 
 	public static void main(String[] args) {
 		int counter=0;

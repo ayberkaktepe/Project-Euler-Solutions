@@ -1,7 +1,7 @@
-//ekran çiktisi:161667
+//ekran çýktýsý:161667
 package euler;
 
-public class Problem075 {
+public class problem075 {
 
 	public static void main(String[] args) {
 		/*

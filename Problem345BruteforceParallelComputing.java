@@ -1,8 +1,9 @@
-//Answer:
-public class Problem345Bruteforce {
+import java.util.stream.IntStream;
 
-	public static void main(String[] args) {// This is the worst method for that problem. But it wont take forever. It about 9 days with my computer.
-		int max=0;
+//Answer:
+public class Problem345BruteforceParallelComputing {
+
+	public static void main(String[] args) {// This is the worst method for that problem. But it wont take forever. Added parallel computing.
 		int[][] matrix = { 
 				{  7,  53, 183, 439, 863, 497, 383, 563,  79, 973, 287,  63, 343, 169, 583},
 				{627, 343, 773, 959, 943, 767, 473, 103, 699, 303, 957, 703, 583, 639, 913},
@@ -20,8 +21,10 @@ public class Problem345Bruteforce {
 				{815, 559, 813, 459, 522, 788, 168, 586, 966, 232, 308, 833, 251, 631, 107},
 				{813, 883, 451, 509, 615,  77, 281, 613, 459, 205, 380, 274, 302,  35, 805},
 			};
-		for(int a0=0; a0<=14; a0++){
-			for(int a1=0; a1<=14; a1++){
+		int a0=0;
+		IntStream.range(0, 14).parallel().forEach(a1->{
+			long startTime = System.currentTimeMillis();
+			int max=0;
 				for(int a2=0; a2<=14; a2++){
 					if(a1==a0)
 						break;
@@ -65,7 +68,6 @@ public class Problem345Bruteforce {
 																		int c=matrix[0][a0]+matrix[1][a1]+matrix[2][a2]+matrix[3][a3]+matrix[4][a4]+matrix[5][a5]+matrix[6][a6]+matrix[7][a7]+matrix[8][a8]+matrix[9][a9]+matrix[10][a10]+matrix[11][a11]+matrix[12][a12]+matrix[13][a13]+matrix[14][a14];
 																		if(c>max){
 																			max=c;
-
 																		}
 																	}																
 																}																
@@ -81,9 +83,9 @@ public class Problem345Bruteforce {
 						}
 					}
 				}
-			}
-		}
-		System.out.println(max);
+			long elapsedTime = System.nanoTime() - startTime;
+			System.out.println("parallel a0="+a0+" max+"+max+" elapsed time"+elapsedTime);
+		});
 	}
 
 }

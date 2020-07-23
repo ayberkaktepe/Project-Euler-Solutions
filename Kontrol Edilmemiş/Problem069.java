@@ -1,7 +1,7 @@
 //çalýþtýr
 package euler;
 
-public class Problem069 {
+public class problem069 {
 //Euler's totient function ile çok daha verimli çözülebilir fakat uðraþmaya üþendim
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

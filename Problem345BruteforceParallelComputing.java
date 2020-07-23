@@ -1,9 +1,15 @@
-import java.util.stream.IntStream;
-
 //Answer:
-public class Problem345BruteforceParallelComputing {
+public class Problem345BruteforceParallelComputing{
 
-	public static void main(String[] args) {// This is the worst method for that problem. But it wont take forever. Added parallel computing.
+	public static void main(String[] args) {/* 	GEZGİN SATICI PROBLEMİNİN KESİN SONUCUNU BRUTEFORCE DIŞINDA BİR METODUN VEREMEDİĞİ ÇEŞİTLİ MAKALELERDE BELİRTİLMİŞTİR.
+	Araç rotalama problemlerinden olan gezgin satıcı problemi örneği görüyoruz, minimizasyon yerine maksimizasyon amacı güdüyoruz. İterasyon sayımız çok yüksek olduğu için
+	sezgisel algoritmalar tercih edilebilir fakat sezgisel algoritmalar en iyi çözümü garanti edemez, excelde genetik solver kullanarak çözdüğümüzde sonuç doğru çıktı. Algoritmanın 
+	verimli olması için koşulu sağlamayan rotaların denenmesi engellenmiştir.
+	Ayrıca bir işlemin çıktısı diğer işlemin girdisi olmayan durumlarda (yani paralel hesaplanabilecek durumlarda) paralel hesaplama yaptırılmıştır. Bu da paralel işlemler ile işlemcinin 
+	çekirdek kullanımını arttırarak daha kısa sürede sonuç bulmamızı sağlar. Yaptığım denemeler ortalama olarak 2-3 gün içerisinde sonuç vereceğini gösterdi.
+	
+
+	*/
 		int[][] matrix = { 
 				{  7,  53, 183, 439, 863, 497, 383, 563,  79, 973, 287,  63, 343, 169, 583},
 				{627, 343, 773, 959, 943, 767, 473, 103, 699, 303, 957, 703, 583, 639, 913},
@@ -21,10 +27,9 @@ public class Problem345BruteforceParallelComputing {
 				{815, 559, 813, 459, 522, 788, 168, 586, 966, 232, 308, 833, 251, 631, 107},
 				{813, 883, 451, 509, 615,  77, 281, 613, 459, 205, 380, 274, 302,  35, 805},
 			};
-		int a0=0;
-		IntStream.range(0, 14).parallel().forEach(a1->{
-			long startTime = System.currentTimeMillis();
+		IntStream.range(0, 14).parallel().forEach(a0->{
 			int max=0;
+			for(int a1=0; a1<=14; a1++){
 				for(int a2=0; a2<=14; a2++){
 					if(a1==a0)
 						break;
@@ -83,9 +88,8 @@ public class Problem345BruteforceParallelComputing {
 						}
 					}
 				}
-			long elapsedTime = System.nanoTime() - startTime;
-			System.out.println("parallel a0="+a0+" max+"+max+" elapsed time"+elapsedTime);
-		});
+			}
+			System.out.println(max);
+		}
 	}
-
 }

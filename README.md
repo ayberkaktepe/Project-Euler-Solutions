@@ -5,13 +5,3 @@ to avoid integer overflow or low speed.
 For the problems you can visit projecteuler.net Enjoy!
 Also you can check my progress projecteuler.net/profile/AyberkAktepe.png
 
-You probably need to know couple of things for figure it out how my code work. There is a short list for you. You may 
-prefer to read those wikipedia articles.
-
-Number Theory
-Discrete Mathematics
-Game Theory
-Graph Theory
-Geometry
-Combinatorics
-
